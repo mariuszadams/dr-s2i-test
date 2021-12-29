@@ -9,16 +9,11 @@ echo "---> Enabling s2i support in httpd24 image"
 config_s2i
 
 echo "---> Installing application source"
-cp -af /tmp/src/. ./
-
-#####KUSTOM#
 cp -af /tmp/src/*.html ./
-#chown apache:apache ./*.html
-#chmod 644 ./*.html
-DATE=`date "+%d.%m.%Y @%H:%M:%S"`
-echo "BUILD ON $DATE </br>" > ./info.html
-echo "BUILT ON Apache $HTTPD_VERSION" >>  ./info.html
-############
+
+DATE=`date "+%Y-%m-%d %H:%M%S"`
+echo "built on $DATE *** <BR/>   " >> ./info.html
+echo "built on APACHE $HTTPD_VERSION" >> ./info.html
 
 # Fix source directory permissions
 fix-permissions ./
