@@ -12,7 +12,7 @@ echo "---> Installing application source"
 cp -af /tmp/src/. ./
 
 #####KUSTOM#
-cp -af /tmp/*.html ./
+cp -af /tmp/src/*.html ./
 #chown apache:apache ./*.html
 #chmod 644 ./*.html
 DATE=`date "+%d.%m.%Y @%H:%M:%S"`
